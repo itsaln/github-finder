@@ -1,32 +1,45 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+	<div class="wrapper">
+
+		<header>
+			<div class="navbar">
+				<div class="container">
+					<div class="navbar-content">
+						<div class="logo">Github Finder</div>
+<!--						<ul class="navbar-list">-->
+<!--							<li v-for="link of links" :key="links.title" class="navbar-item">-->
+<!--								<router-link :to="link.url" class="navbar-link" :title="link.title">{{ link.title }}</router-link>-->
+<!--							</li>-->
+<!--						</ul>-->
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<router-view></router-view>
+
+		<!-- <footer></footer> -->
+
+	</div>
 </template>
 
+<script>
+	export default {
+		name: 'App',
+		data: () => ({
+      links: [
+        {title: 'Home', url: '/'}
+      ]
+    })
+	}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
+	.navbar-link {
+		&.router-link-active {
+			color: #5247e7;
+		}
+	}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
