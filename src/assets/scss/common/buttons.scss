@@ -5,6 +5,11 @@
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 30px;
+  transition: .2s ease opacity;
+
+  &:hover {
+    opacity: .8;
+  }
 
   // default btn
   &.btnDefaul {

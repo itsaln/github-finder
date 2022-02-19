@@ -8,6 +8,10 @@ input {
   padding: 16px 26px;
   margin-bottom: 30px;
   border-radius: 20px;
+
+  &::placeholder {
+    opacity: .5;
+  }
 }
 textarea {
   padding: 30px 27px;

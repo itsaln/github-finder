@@ -7,17 +7,17 @@ import Home from './pages/Home'
 import NotFound from './pages/404'
 
 export default new VueRouter({
-	mode: 'history',
-	routes: [
-		{
-			path: '/',
-			name: 'Home',
-			component: Home
-		},
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
     {
       path: '*',
       name: 'NotFound',
       component: NotFound
     }
-	]
+  ]
 })
