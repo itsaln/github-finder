@@ -6,14 +6,17 @@
 				<div class="container">
 					<div class="navbar-content">
 						<div class="logo">Github Finder</div>
+            <ul class="navbar-list">
+              <li class="navbar-item" v-for="link of links" :key="link.title">
+                <nuxt-link class="navbar-link" :title="link.title" :to="link.url">{{ link.title }}</nuxt-link>
+              </li>
+            </ul>
 					</div>
 				</div>
 			</div>
 		</header>
 
 		<router-view></router-view>
-
-		<!-- <footer></footer> -->
 
 	</div>
 </template>
